@@ -1,6 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   currentTime: string = '';
-  prayerTimes$: Observable<any>; // Observable for Firebase data
 
   private timer: any;
-
-  constructor(private db: AngularFireDatabase) {}
 
   ngOnInit(): void {
     this.updateClock(); // Initialize the clock immediately
     this.timer = setInterval(() => this.updateClock(), 1000); // Update the clock every second
-
-    // Fetch prayer times from Firebase
-    this.prayerTimes$ = this.db.object('prayerTimes').valueChanges();
   }
 
   ngOnDestroy(): void {
