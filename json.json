@@ -1,0 +1,26 @@
+{
+    "prayerTimes": {
+      "shabbat": {
+        "minchaErev": "18:35",
+        "hadlakatNerot": "19:20",
+        "shacharit": "08:15",
+        "kriatTorah": "10:00",
+        "minchaGdola": "11:30",
+        "mincha": "12:45",
+        "minchaLater": "17:00"
+      },
+      "weekday": {
+        "hadlakatNerot": "06:21",
+        "mincha": "18:35",
+        "maariv": "19:35",
+        "shacharit": "08:00",
+        "shiur": "12:35"
+      },
+      "announcements": {
+        "general": "בבקשה להקדים לתפילות",
+        "shabbat": "אנא דייקו בזמנים בשבת"
+      },
+      "currentDate": "יום חמישי י\"ב אלול תשפ\"ד"
+    }
+  }
+  

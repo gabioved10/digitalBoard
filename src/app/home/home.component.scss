@@ -1,0 +1,225 @@
+// Enable RTL for the entire page
+html {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  // General Container Styling
+  .container {
+    background-color: #fdf5e6;
+    border: 2px solid #8b4513;
+    padding: 20px;
+    // border-radius: 10px;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+  
+  // Top Section
+  .top-section {
+    background-color: #8b0000;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: right; // Right-align for Hebrew
+  
+    .main-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+  
+    .sub-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  // Main Content Layout
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+  
+    // Left Section: Shabbat Prayer Times
+    .left-section {
+      .shabbat-prayers {
+        background-color: #ffe4b5;
+        border: 2px solid #8b4513;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: right; // Right-align text in prayer times section
+  
+        .prayer-title {
+          font-size: 1.6rem;
+          color: #8b0000;
+          text-align: center;
+        }
+  
+        .list-group-item {
+          font-size: 1.3rem;
+          padding: 10px;
+          border-bottom: 1px solid #ccc;
+          text-align: right; // Align list items to the right
+        }
+  
+        .small-text {
+          font-size: 0.9rem;
+          color: #666;
+          text-align: center;
+        }
+      }
+    }
+  
+    // Center Section: Weekday Prayer Times
+    .center-section {
+      .weekday-prayers {
+        background-color: #e6f7ff;
+        border: 2px solid #8b4513;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: right; // Align prayer times to the right
+  
+        .schedule-title {
+          font-size: 1.5rem;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+  
+        .schedule-list {
+          list-style-type: none;
+          padding-left: 0;
+  
+          li {
+            font-size: 1.3rem;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: right; // Align list items to the right
+          }
+        }
+      }
+  
+      .blue-text {
+        background-color: #00bfff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 10px;
+  
+        p {
+          font-size: 1.3rem;
+          text-align: right; // Align the blue text to the right
+        }
+      }
+    }
+  
+    // Right Section: Image, Time of Day, and Text
+    .right-section {
+      text-align: right; // Right-align for the entire section
+  
+      .image-section {
+        text-align: center; // Center the image
+  
+        .clock-image {
+          width: 150px;
+          margin-bottom: 10px;
+        }
+  
+        .image-caption {
+          font-size: 1.2rem;
+          color: #8b4513;
+          text-align: right; // Align the caption to the right
+        }
+      }
+  
+      .time-of-day-section {
+        background-color: #fdf5e6;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: right; // Align the time text to the right
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+  
+      .announcement-section {
+        background-color: #ffe4b5;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: right; // Align the announcement text to the right
+        font-size: 1.3rem;
+        color: #8b4513;
+      }
+    }
+  }
+  
+  // Bottom Section
+  .bottom-section {
+    background-color: #8b0000;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: right; // Right-align for Hebrew
+  
+    .bottom-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .top-section {
+    margin-bottom: 20px;
+  
+    .digital-clock-section {
+      display: flex;
+      justify-content: flex-end; /* Align clock to the right */
+      margin-top: 10px;
+  
+      .digital-clock {
+        font-size: 3.5rem; /* Adjust clock size */
+        font-weight: bold;
+        color: #ffe4b5; /* Clock text color */
+        // border: 3px solid #8b4513;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #8b0000; /* Background color */
+      }
+    }
+  }
+  
+  
+  
+  .announcement-section {
+    height: 250px; /* Adjust based on how much of the text you want visible */
+    overflow: hidden; /* Hide the text that goes outside the container */
+    position: relative; /* So that we can position the scrolling text */
+    background-color: #f8f9fa; /* Optional: Add a background color if needed */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    
+    p {
+      position: absolute;
+      width: 100%; /* Make sure the text spans the entire width */
+      height: 100%;
+      margin: 0;
+      line-height: 50px; /* Same as container height for vertical alignment */
+      text-align: center;
+      transform: translateY(100%); /* Start below the container */
+      animation: scroll-up 5s linear infinite; /* Scroll up over 5 seconds */
+    }
+  }
+  
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(100%); /* Start below the container */
+    }
+    100% {
+      transform: translateY(-100%); /* End above the container */
+    }
+  }
+  
+  
+  
+
+  

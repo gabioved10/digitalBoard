@@ -1,0 +1,62 @@
+<div class="container">
+    <!-- Top Section with Digital Clock on the Right -->
+    <div class="row top-section align-items-center">
+      <div class="col-md-8 text-center">
+        <h1 class="main-title">זמני התפילות</h1>
+        <h2 class="sub-title">קהילת בני תורה - משכן הודיה</h2>
+        <h3 class="sub-title">חניכי הישיבות</h3>
+      </div>
+      <div class="col-md-4 text-right digital-clock-section">
+        <div class="digital-clock">{{ currentTime }}</div>
+      </div>
+    </div>
+  
+    <!-- Main Content -->
+    <div class="row main-content" *ngIf="prayerTimes$ | async as prayerTimes">
+      <!-- Left Section: Shabbat Prayer Times -->
+      <div class="col-md-4 left-section">
+        <div class="shabbat-prayers">
+          <h3 class="prayer-title">שבת קודש</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">מנחה ערב שבת: {{ prayerTimes.shabbat.minchaErev }}</li>
+            <li class="list-group-item">הדלקת נרות: {{ prayerTimes.shabbat.hadlakatNerot }}</li>
+            <li class="list-group-item">תפילת שחרית: {{ prayerTimes.shabbat.shacharit }}</li>
+            <li class="list-group-item">קריאת התורה: {{ prayerTimes.shabbat.kriatTorah }}</li>
+            <li class="list-group-item">מנחה גדולה: {{ prayerTimes.shabbat.minchaGdola }}</li>
+            <li class="list-group-item">מנחה: {{ prayerTimes.shabbat.mincha }}</li>
+            <li class="list-group-item">מנחה גדולה: {{ prayerTimes.shabbat.minchaLater }}</li>
+          </ul>
+          <p class="small-text">*שימו לב! אנא דייקו בזמנים</p>
+        </div>
+      </div>
+  
+      <!-- Center Section: Weekday Prayer Times -->
+      <div class="col-md-4 center-section">
+        <div class="weekday-prayers">
+          <h3 class="schedule-title">תפילות ימי חול</h3>
+          <ul class="schedule-list">
+            <li>הדלקת נרות: {{ prayerTimes.weekday.hadlakatNerot }}</li>
+            <li>מנחה: {{ prayerTimes.weekday.mincha }}</li>
+            <li>ערבית: {{ prayerTimes.weekday.maariv }}</li>
+            <li>שיעור: {{ prayerTimes.weekday.shiur }}</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Right Section: Announcements -->
+      <div class="col-md-4 right-section">
+        <div class="announcement-section">
+          <p>{{ prayerTimes.announcements.general }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Bottom Section -->
+    <div class="row bottom-section text-center">
+      <div class="col">
+        <h2 class="bottom-title">לעילוי נשמת</h2>
+        <p>{{ prayerTimes.currentDate }}</p>
+      </div>
+    </div>
+  </div>
+  
